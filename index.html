@@ -1,7 +1,32 @@
-FROM redhat/ubi8
-RUN yum update -y
-RUN yum install httpd -y
-COPY ./index.html /var/www/html/
-COPY ./IMG_8254.JPG /var/www/html/
-EXPOSE 80
-CMD ["/usr/sbin/httpd","-D","FOREGROUND"]
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Sitio Aqua</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #00FFFF;
+      color: black;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    h1 {
+      font-size: 3em;
+    }
+    img {
+      max-width: 80%;
+      height: auto;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>¡Hello Family!</h1>
+  <img src="IMG_8254.JPG" alt="Tembo's Family">
+</body>
+</html>
